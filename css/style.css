@@ -16,6 +16,10 @@ VERSION:	Versoin Number
   font-display: swap;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   line-height: 1.5;
   font-family: "Open Sans", sans-serif;
@@ -205,6 +209,40 @@ body {
   border-radius: 50%;
 }
 
+.float-1{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:80px;
+	right:40px;
+	background-color:#075e54;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px rgb(255, 251, 0);
+  z-index:100;
+}
+
+.float-2{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:10px;
+	right:40px;
+	background-color:#fdfffd;
+	/* color:#FFF; */
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px rgb(44, 43, 3);
+  z-index:100;
+}
+
+.my-float{
+	margin-top:16px;
+}
+
 @-webkit-keyframes dot {
   50% {
     -webkit-transform: translateX(96px);
@@ -326,12 +364,20 @@ a:hover, a.text-dark:hover {
   display: unset !important;
 }
 
-.bg-primary {
-  background: #ff6f00 !important;
+.bg-primary-fade {
+  background: #3b94fad2 !important;
+}
+
+.bg-primary-2{
+  background: #68ffa7d2;
 }
 
 .bg-secondary {
-  background: #fdefe6 !important;
+  background: #fc7b18 !important;
+}
+
+.bg-white{
+  background-color: #ada2a294;
 }
 
 .text-primary {
@@ -390,6 +436,10 @@ a:hover, a.text-dark:hover {
   margin-bottom: 100px !important;
 }
 
+.rounded-3{
+  border-radius: 3%;
+}
+
 .zindex-1 {
   z-index: 1;
 }
@@ -416,6 +466,10 @@ textarea.form-control {
 
 .navigation {
   z-index: 9;
+}
+
+.navbar{
+  margin: -9px;
 }
 
 .headroom {
@@ -501,6 +555,12 @@ textarea.form-control {
   .navbar .dropdown-menu.show {
     visibility: visible;
     display: block;
+  }
+}
+
+@media (max-width: 422px) {
+  .brand-logo{
+    width: 200px;
   }
 }
 
@@ -606,6 +666,20 @@ textarea.form-control {
   color: #000000;
   text-decoration: underline;
   background: transparent;
+}
+
+.map-responsive{
+  overflow:hidden;
+  padding-bottom:50%;
+  position:relative;
+  height:0;
+}
+.map-responsive iframe{
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  position:absolute;
 }
 
 .instagram-post {
@@ -847,9 +921,25 @@ blockquote {
 
 /*# sourceMappingURL=maps/style.css.map */
 body{
-  background-color: #abecab;
+  background:url('../assets/images/background/texture_128_513537.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .nav-bg-hdew{
   background-color: #cfcfcf;
+}
+
+.zoom {
+  background-color: green;
+  transition: transform .2s; /* Animation */
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  transform: scale(2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
